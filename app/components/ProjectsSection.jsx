@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Airbnb react native clone",
-    description: "Project 1 description",
+    description: "A room reservation app for your holiday",
     image: "./images/airbnb-rn-5.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Ham12-3/Airbnb-reactnative-clone.git",
