@@ -61,7 +61,7 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a highly experienced full-stack developer with a proven track
             record of developing responsive and innovative web applications for
-            enterprise organizations. With over 2 years of expertise in frontend
+            enterprise organizations. With 3 years of expertise in frontend
             development, I have built the best user interfaces utilizing HTML5,
             CSS3, React, React Native, and other JavaScript libraries. I also
             possess capabilities to develop server-side code using NodeJS &
