@@ -52,7 +52,7 @@ export default function Skills() {
     <section
       id="skills"
       
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28  scroll-mt-28 text-center sm:mb-40"
     >
        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Skills
