@@ -33,8 +33,8 @@ const skillsData = [
     "Prisma",
     "MongoDB",
     "Redux",
-    "GraphQL",
-    "Apollo",
+    
+    "Test Driven Development",
     "Express",
     "PostgreSQL",
     "Python",
