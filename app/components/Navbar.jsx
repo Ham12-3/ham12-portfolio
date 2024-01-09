@@ -23,7 +23,7 @@ const navLinks = [
     path:"#skills"
   },
   {
-    title:'Expereince',
+    title:'Experience',
     path:'#Experience'
   }
 ];

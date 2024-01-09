@@ -38,7 +38,7 @@ const experiencesData = [
       title: "Backend Developer",
       location: "Fiverr",
       description:
-        "making use of Node.js and Django tobuild APIs",
+        "making use of Node.js and Django to build APIs",
       icon: React.createElement(CgWorkAlt),
       date: "Oct, 2022 - Present",
     },
@@ -62,7 +62,7 @@ export default function Experience() {
         <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Experience
       </h2>
-      <VerticalTimeline lineColor="">
+      <VerticalTimeline lineColor="white">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -73,21 +73,23 @@ export default function Experience() {
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
+                color:'white'
               }}
               contentArrowStyle={{
-                borderRight:"0.4rem solid rgba(255, 255, 255, 0.5)",
+                borderRight:"0.4rem solid white",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
                 background:
-                   "rgba(255, 255, 255, 0.15)",
+                   "white",
                 fontSize: "1.5rem",
+                color:'black'
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+              <h3 className="font-semibold capitalize text-white">{item.title}</h3>
+              <p className="font-normal !mt-0 text-white">{item.location}</p>
+              <p className="!mt-1 !font-normal text-white">
                 {item.description}
               </p>
             </VerticalTimelineElement>
