@@ -41,24 +41,8 @@ const projectsData = [
     gitUrl: "https://github.com/Ham12-3/delivroo-clone-react-native",
     previewUrl: "/",
   },
-  {
-    id: 5,
-    title: "Taxi Ordering Mobile app",
-    description: "A mobile app similar to the Uber mobile app",
-    image: "./images/uber-2.jpg",
-    tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/Ham12-3/Uber-Clone-react-native",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Ive-book social media web-app",
-    description: "A social media web app similar to facebook",
-    image: "./images/facebook-clone-6.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Ham12-3/facebook-frontend",
-    previewUrl: "/",
-  },
+ 
+ 
   {
     id: 7,
     title: "Ive-book social media app backend API",
