@@ -22,31 +22,32 @@ const experiencesData = [
       title: "Full Stack development Bootcamp, Udemy, London App Brewery",
       location: "Remote",
       description:
-        "Built frontend web apps and REST APIs",
+        "Developed a full stack web application from scratch, including back-end services, front-end interface, and database, and developed a full stack web application with a modern user interface that improved userengagement by 10%",
       icon: React.createElement(LuGraduationCap),
       date: "2020 - June 2022",
+    },
+    {
+      title: "Backend Developer",
+      location: "Fiverr",
+      description:
+        "Develops, tests and deploys applications in cloud environments",
+      icon: React.createElement(CgWorkAlt),
+      date: "Oct, 2022 - Present",
     },
     {
         title: "SEO Specialist",
         location: "Upwork",
         description:
-          "Used SEO strategies to make quality decisions",
+          "Developed and implemented successful SEO strategies to improve organic search rankings of my clients",
         icon: React.createElement(CgWorkAlt),
         date: "March,2023 - December, 2023",
       },
-    {
-      title: "Backend Developer",
-      location: "Fiverr",
-      description:
-        "making use of Node.js and Django to build APIs",
-      icon: React.createElement(CgWorkAlt),
-      date: "Oct, 2022 - Present",
-    },
+   
     {
       title: "Full-Stack Developer",
       location: "Anglaar Digital Agency",
       description:
-        "I'm now a Full-Stack Engineer. My skills includes React, Next.js, TypeScript, Tailwind, Django, React, AWS, Docker Prisma and MongoDB. ",
+        "Proven ability to build complex applications from scratch • ",
       icon: React.createElement(FaReact),
       date: "May, 2023 - present",
     },
