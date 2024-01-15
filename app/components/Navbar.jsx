@@ -23,8 +23,8 @@ const navLinks = [
     path:"#skills"
   },
   {
-    title:'Experience',
-    path:'#Experience'
+    title:'Blogs',
+    path:'https://abdulk.hashnode.dev/'
   }
 ];
 
