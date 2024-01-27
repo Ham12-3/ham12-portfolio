@@ -26,7 +26,7 @@ const HeroSection = () => {
                 1000,
                 "Full-Stack Engineer",
                 1000,
-                "Mobile App Engineer",
+                "Mobile Engineer",
                 1000,
                 "Cloud Engineer",
                 1000,
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </Link>
             <Link
             download
-            href='./Abdulhamid_Sonaike_-_Software_Engineer.pdf'
+            href='./abulhamid_sonaike_verified-resume.pdf'
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span  className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
