@@ -1,16 +1,27 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ProjectTag = ({ name, onClick, isSelected }) => {
-  const buttonStyles = isSelected
-    ? "text-white border-primary-500"
-    : "text-[#ADB7BE] border-slate-600 hover:border-white";
   return (
-    <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className={`relative px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
+        isSelected 
+          ? "bg-luxury-gradient text-luxury-dark shadow-lg shadow-luxury-gold/30" 
+          : "bg-luxury-darkGray/50 text-luxury-platinum/70 hover:text-luxury-gold hover:bg-luxury-gold/10 border border-luxury-gold/20"
+      }`}
       onClick={() => onClick(name)}
     >
-      {name}
-    </button>
+      <span className="relative z-10">{name}</span>
+      {isSelected && (
+        <motion.div
+          layoutId="activeProjectTag"
+          className="absolute inset-0 bg-luxury-gradient rounded-full"
+          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+        />
+      )}
+    </motion.button>
   );
 };
 
