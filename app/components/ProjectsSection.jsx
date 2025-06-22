@@ -176,7 +176,7 @@ const ProjectsSection = () => {
             whileTap={{ scale: 0.95 }}
             className="inline-block px-8 py-4 bg-luxury-gradient rounded-full text-luxury-dark font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-luxury-gold/30"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </motion.a>
         </motion.div>
       </div>

@@ -173,11 +173,11 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold luxury-text mb-4">Full Stack Engineer & Cloud Expert</h3>
               <p className="text-luxury-platinum/90 text-lg leading-relaxed mb-6">
                 Currently building revolutionary AI applications at <span className="text-luxury-gold font-semibold">LOTUS BPM AI Services</span>, 
-                where I'm developing AI DOCS COPILOT - an innovative platform that helps students study 70% faster and 
+                where I&apos;m developing AI DOCS COPILOT - an innovative platform that helps students study 70% faster and 
                 improve academic performance by up to 90%.
               </p>
               <p className="text-luxury-platinum/80 leading-relaxed mb-6">
-                As an AWS Certified Developer and open-source contributor, I've built scalable cloud solutions, 
+                As an AWS Certified Developer and open-source contributor, I&apos;ve built scalable cloud solutions, 
                 contributed to projects like Dottie (AI health app), and created popular developer tools with nearly 
                 1,000 downloads. My work spans modern tech stacks including Next.js, FastAPI, AWS services, and AI integrations.
               </p>
