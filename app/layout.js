@@ -4,6 +4,7 @@ import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata = {
   title: "Abdulhamid Sonaike",
   description: "Full stack developer",
