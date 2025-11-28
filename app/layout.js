@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Script from 'next/script
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,17 +14,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>{children}
     <!-- Customer Support AI Widget -->
-<!-- This script is safe to commit to GitHub - no secrets exposed -->
-<script>
-  (function() {
-    var script = document.createElement('script');
-    script.src = 'http://localhost:3001/widget.js';
-    script.setAttribute('data-domain', 'abdulhamid.dev');
-    script.setAttribute('data-api-url', 'http://localhost:5000');
-    script.async = true;
-    document.body.appendChild(script);
-  })();
-</script>
+{/* Customer Support AI Widget */}
+{/* Add this inside your layout.js or _app.js */}
+
+
+<Script
+  id="customer-support-widget"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        var script = document.createElement('script');
+        script.src = 'http://localhost:3001/widget.js';
+        script.setAttribute('data-domain', 'abdulhamid.dev');
+        script.setAttribute('data-api-url', 'http://localhost:5000');
+        script.async = true;
+        document.body.appendChild(script);
+      })();
+    `,
+  }}
+/>
     </body>
     </html>
   );
