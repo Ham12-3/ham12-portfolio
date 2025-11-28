@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}
-    <!-- Customer Support AI Widget -->
+  
 {/* Customer Support AI Widget */}
 {/* Add this inside your layout.js or _app.js */}
 
