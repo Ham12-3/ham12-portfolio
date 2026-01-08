@@ -71,7 +71,7 @@ export default function BackgroundPattern() {
             {`
               .line {
                 stroke: ${lineColor};
-                stroke-width: 1.5;
+                stroke-width: 0.33;
                 stroke-opacity: 0.5;
                 vector-effect: non-scaling-stroke;
                 stroke-linecap: round;
