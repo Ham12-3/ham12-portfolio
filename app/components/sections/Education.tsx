@@ -32,7 +32,7 @@ const education: EducationItem[] = [
     institution: "Aston University",
     degree: "Bachelor of Science (BSc) in Computer Science",
     location: "United Kingdom",
-    date: "Completed",
+    date: "Ongoing",
   },
 ];
 
