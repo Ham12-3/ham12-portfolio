@@ -58,6 +58,7 @@ const projectsData: Project[] = [
     tag: ["All", "Web", "AI"],
     gitUrl: "https://github.com/Ham12-3/dottie-contribution",
     previewUrl: "#",
+    featured: false,
     technologies: ["React", "AI Integration", "Health Tech"]
   },
   {
@@ -68,6 +69,7 @@ const projectsData: Project[] = [
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Ham12-3/Airbnb-reactnative-clone.git",
     previewUrl: "/",
+    featured: false,
     technologies: ["React Native", "Firebase", "Maps API"]
   },
   {
@@ -78,6 +80,7 @@ const projectsData: Project[] = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Ham12-3/clothing-ecommerce",
     previewUrl: "/",
+    featured: false,
     technologies: ["React", "Node.js", "Stripe", "MongoDB"]
   },
   {
@@ -88,6 +91,7 @@ const projectsData: Project[] = [
     tag: ["All", "Backend"],
     gitUrl: "https://github.com/Ham12-3/facebook-clone-django-backend",
     previewUrl: "/",
+    featured: false,
     technologies: ["Django", "PostgreSQL", "Redis", "WebSockets"]
   },
 ];
