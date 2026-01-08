@@ -118,7 +118,7 @@ export default function YearlySnapshot() {
   return (
     <section id="experience" className="py-24 bg-background-light/10 dark:bg-background-dark/10 relative">
       <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border-light dark:via-border-dark to-transparent hidden lg:block"></div>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-pattern-aligned max-w-4xl mx-auto relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

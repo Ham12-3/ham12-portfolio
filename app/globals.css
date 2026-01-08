@@ -111,3 +111,43 @@ body {
 .dark .bg-pattern {
   --line-colour: #ffffff;
 }
+
+/* SVG Pattern Alignment - Content containers aligned with pattern vertical lines */
+/* Pattern lines are at 8.33% (160px) and 91.67% (1760px) of 1920px viewBox */
+.container-pattern-aligned {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 8.33vw, 160px);
+  padding-right: clamp(1rem, 8.33vw, 160px);
+}
+
+/* For smaller screens, use responsive padding that scales with viewport */
+@media (max-width: 640px) {
+  .container-pattern-aligned {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container-pattern-aligned {
+    padding-left: clamp(1.5rem, 6vw, 120px);
+    padding-right: clamp(1.5rem, 6vw, 120px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-pattern-aligned {
+    padding-left: clamp(2rem, 8.33vw, 160px);
+    padding-right: clamp(2rem, 8.33vw, 160px);
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-pattern-aligned {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}

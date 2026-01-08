@@ -65,7 +65,7 @@ export default function Footer() {
   return (
     <>
       <section id="contact" className="py-24 bg-background-light/10 dark:bg-background-dark/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-pattern-aligned">
           <motion.div
             ref={ref}
             initial={{ opacity: 0 }}
@@ -264,7 +264,7 @@ export default function Footer() {
         transition={{ duration: 0.6 }}
         className="py-12 bg-surface-light/10 dark:bg-surface-dark/10 border-t border-border-light/30 dark:border-border-dark/30 mt-20"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container-pattern-aligned">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}

@@ -62,7 +62,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-24 bg-background-light/10 dark:bg-background-dark/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container-pattern-aligned">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}

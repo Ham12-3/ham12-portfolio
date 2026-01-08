@@ -55,10 +55,10 @@ export default function BackgroundPattern() {
       <svg
         ref={svgRef}
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 900"
+        viewBox="0 0 1920 1080"
         fill="none"
         className="w-full h-full"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio="none"
         style={{
           opacity: 1,
           display: 'block',
@@ -84,35 +84,35 @@ export default function BackgroundPattern() {
           </style>
         </defs>
 
-        {/* Vertical grid lines (only two) */}
-        <line className="line" x1="120" y1="0" x2="120" y2="900" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="1320" y1="0" x2="1320" y2="900" stroke={lineColor} strokeOpacity="0.5" />
+        {/* Vertical grid lines (only two) - scaled to new viewBox */}
+        <line className="line" x1="160" y1="0" x2="160" y2="1080" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1760" y1="0" x2="1760" y2="1080" stroke={lineColor} strokeOpacity="0.5" />
 
         {/* Bottom-left quadrant */}
-        {/* Centre at (0, 900) */}
-        <path className="line line-strong" d="M 280 900 A 280 280 0 0 0 0 620" stroke={lineColor} strokeOpacity="0.7" />
-        <path className="line" d="M 200 900 A 200 200 0 0 0 0 700" stroke={lineColor} strokeOpacity="0.5" />
-        <path className="line" d="M 120 900 A 120 120 0 0 0 0 780" stroke={lineColor} strokeOpacity="0.5" />
+        {/* Centre at (0, 1080) */}
+        <path className="line line-strong" d="M 373 1080 A 373 373 0 0 0 0 707" stroke={lineColor} strokeOpacity="0.7" />
+        <path className="line" d="M 267 1080 A 267 267 0 0 0 0 813" stroke={lineColor} strokeOpacity="0.5" />
+        <path className="line" d="M 160 1080 A 160 160 0 0 0 0 920" stroke={lineColor} strokeOpacity="0.5" />
 
         {/* Radial lines for bottom-left quadrant */}
-        <line className="line" x1="0" y1="900" x2="280" y2="900" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="0" y1="900" x2="0" y2="620" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="0" y1="900" x2="198" y2="702" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="0" y1="900" x2="242" y2="758" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="0" y1="900" x2="141" y2="659" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="0" y1="1080" x2="373" y2="1080" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="0" y1="1080" x2="0" y2="707" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="0" y1="1080" x2="264" y2="816" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="0" y1="1080" x2="323" y2="910" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="0" y1="1080" x2="188" y2="791" stroke={lineColor} strokeOpacity="0.5" />
 
         {/* Top-right quadrant */}
-        {/* Centre at (1440, 0) */}
-        <path className="line line-strong" d="M 1160 0 A 280 280 0 0 1 1440 280" stroke={lineColor} strokeOpacity="0.7" />
-        <path className="line" d="M 1240 0 A 200 200 0 0 1 1440 200" stroke={lineColor} strokeOpacity="0.5" />
-        <path className="line" d="M 1320 0 A 120 120 0 0 1 1440 120" stroke={lineColor} strokeOpacity="0.5" />
+        {/* Centre at (1920, 0) */}
+        <path className="line line-strong" d="M 1547 0 A 373 373 0 0 1 1920 373" stroke={lineColor} strokeOpacity="0.7" />
+        <path className="line" d="M 1653 0 A 267 267 0 0 1 1920 267" stroke={lineColor} strokeOpacity="0.5" />
+        <path className="line" d="M 1760 0 A 160 160 0 0 1 1920 160" stroke={lineColor} strokeOpacity="0.5" />
 
         {/* Radial lines for top-right quadrant */}
-        <line className="line" x1="1440" y1="0" x2="1160" y2="0" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="1440" y1="0" x2="1440" y2="280" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="1440" y1="0" x2="1242" y2="198" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="1440" y1="0" x2="1198" y2="142" stroke={lineColor} strokeOpacity="0.5" />
-        <line className="line" x1="1440" y1="0" x2="1299" y2="241" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1920" y1="0" x2="1547" y2="0" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1920" y1="0" x2="1920" y2="373" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1920" y1="0" x2="1656" y2="264" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1920" y1="0" x2="1597" y2="170" stroke={lineColor} strokeOpacity="0.5" />
+        <line className="line" x1="1920" y1="0" x2="1732" y2="289" stroke={lineColor} strokeOpacity="0.5" />
       </svg>
     </div>
   );
