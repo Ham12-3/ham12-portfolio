@@ -3,7 +3,25 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, technologies = [], featured = false }) => {
+interface ProjectCardProps {
+  imgUrl: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+  previewUrl: string;
+  technologies?: string[];
+  featured?: boolean;
+}
+
+const ProjectCard = ({ 
+  imgUrl, 
+  title, 
+  description, 
+  gitUrl, 
+  previewUrl, 
+  technologies = [], 
+  featured = false 
+}: ProjectCardProps) => {
   return (
     <motion.div 
       whileHover={{ y: -10 }}
@@ -85,3 +103,4 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, technolog
 };
 
 export default ProjectCard;
+

@@ -4,7 +4,19 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
-const projectsData = [
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tag: string[];
+  gitUrl: string;
+  previewUrl: string;
+  featured: boolean;
+  technologies: string[];
+}
+
+const projectsData: Project[] = [
   {
     id: 1,
     title: "AI DOCS COPILOT",
@@ -82,10 +94,10 @@ const projectsData = [
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
+  const handleTagChange = (newTag: string) => {
     setTag(newTag);
   };
 
@@ -185,3 +197,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+

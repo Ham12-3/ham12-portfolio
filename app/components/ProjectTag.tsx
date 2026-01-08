@@ -1,41 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const variants = {
-  default: { width: 0 },
-  active: { width: "100%" },
-};
+interface ProjectTagProps {
+  name: string;
+  onClick: (name: string) => void;
+  isSelected: boolean;
+}
 
-const TabButton = ({ active, selectTab, children }) => {
+const ProjectTag = ({ name, onClick, isSelected }: ProjectTagProps) => {
   return (
-    <motion.button 
-      onClick={selectTab}
+    <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`relative px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
-        active 
+        isSelected 
           ? "bg-luxury-gradient text-luxury-dark shadow-lg shadow-luxury-gold/30" 
           : "bg-luxury-darkGray/50 text-luxury-platinum/70 hover:text-luxury-gold hover:bg-luxury-gold/10 border border-luxury-gold/20"
       }`}
+      onClick={() => onClick(name)}
     >
-      <span className="relative z-10">{children}</span>
-      {active && (
+      <span className="relative z-10">{name}</span>
+      {isSelected && (
         <motion.div
-          layoutId="activeTab"
+          layoutId="activeProjectTag"
           className="absolute inset-0 bg-luxury-gradient rounded-full"
           transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-        />
-      )}
-      {!active && (
-        <motion.div
-          animate={active ? "active" : "default"}
-          variants={variants}
-          className="absolute bottom-0 left-0 h-0.5 bg-luxury-gradient rounded-full"
-          transition={{ duration: 0.3 }}
         />
       )}
     </motion.button>
   );
 };
 
-export default TabButton;
+export default ProjectTag;
+

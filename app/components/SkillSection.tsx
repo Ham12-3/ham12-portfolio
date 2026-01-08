@@ -1,9 +1,6 @@
 "use client";
 
 import React from "react";
-// import SectionHeading from "./section-heading"; 
-
-
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
@@ -11,7 +8,7 @@ const fadeInAnimationVariants = {
     opacity: 0,
     y: 100,
   },
-  animate:(index) => ({
+  animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -21,40 +18,36 @@ const fadeInAnimationVariants = {
 };
 
 const skillsData = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
-    "Tailwind",
-    "Prisma",
-    "MongoDB",
-    "Redux",
-    
-    "Test Driven Development",
-    "Express",
-    "PostgreSQL",
-    "Python",
-    "Django",
-    "Framer Motion",
-    "Docker",
-    "AWS",
-    "React Native"
-  ]
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Git",
+  "Tailwind",
+  "Prisma",
+  "MongoDB",
+  "Redux",
+  "Test Driven Development",
+  "Express",
+  "PostgreSQL",
+  "Python",
+  "Django",
+  "Framer Motion",
+  "Docker",
+  "AWS",
+  "React Native"
+];
 
 export default function Skills() {
-//   const { ref } = useSectionInView("
-
   return (
     <section
       id="skills"
-      
-      className="mb-28 mt-20  scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 mt-20 scroll-mt-28 text-center sm:mb-40"
     >
-       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Skills
       </h2>
       <ul className="flex flex-wrap justify-center align-center gap-2 text-lg text-gray-800">
@@ -77,3 +70,4 @@ export default function Skills() {
     </section>
   );
 }
+

@@ -13,7 +13,17 @@ import { FaReact, FaAws, FaPython } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import { SiOpenai } from "react-icons/si";
 
-const experiencesData = [
+interface ExperienceData {
+  title: string;
+  company: string;
+  location: string;
+  description: string;
+  icon: React.ReactElement;
+  date: string;
+  tags: string[];
+}
+
+const experiencesData: ExperienceData[] = [
   {
     title: "Full Stack Engineer",
     company: "LOTUS BPM AI Services",
@@ -148,3 +158,4 @@ export default function Experience() {
     </section>
   );
 }
+

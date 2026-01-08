@@ -1,32 +1,27 @@
 "use client";
-import React, { useState } from "react";
-import GithubIcon from "../../public/github-icon.svg";
-import LinkedinIcon from "../../public/linkedin-icon.svg";
+import React, { useState, FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
-      // The method is POST because we are sending data.
       method: "POST",
-      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
-      // Body of the request is the JSON data we created above.
       body: JSONdata,
     };
 
@@ -57,10 +52,10 @@ const EmailSection = () => {
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://www.github.com/Ham12-3/">
-            <Image src={GithubIcon} alt="Github Icon" />
+            <Image src="/github-icon.svg" alt="Github Icon" width={24} height={24} />
           </Link>
           <Link href="https://www.linkedin.com/in/abdulhamid-sonaike/">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image src="/linkedin-icon.svg" alt="Linkedin Icon" width={24} height={24} />
           </Link>
         </div>
       </div>
@@ -131,3 +126,4 @@ const EmailSection = () => {
 };
 
 export default EmailSection;
+

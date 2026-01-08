@@ -9,13 +9,19 @@ const AnimatedNumbers = dynamic(
   { ssr: false }
 );
 
-const achievementsList = [
+interface Achievement {
+  metric: string;
+  value: string;
+  postfix?: string;
+  prefix?: string;
+}
+
+const achievementsList: Achievement[] = [
   {
     metric: "Projects",
     value: "50",
     postfix: "+",
   },
- 
   {
     metric: "Awards",
     value: "2",
@@ -23,7 +29,6 @@ const achievementsList = [
   {
     metric: "Years",
     value: "3+",
-    
   },
 ];
 
@@ -39,19 +44,20 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
-                />
+                <span className="text-white text-4xl font-bold">
+                  <AnimatedNumbers
+                    includeComma
+                    animateToNumber={parseInt(achievement.value)}
+                    locale="en-US"
+                    configs={(_: unknown, index: number) => {
+                      return {
+                        mass: 1,
+                        friction: 100,
+                        tensions: 140 * (index + 1),
+                      };
+                    }}
+                  />
+                </span>
                 {achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
@@ -64,3 +70,4 @@ const AchievementsSection = () => {
 };
 
 export default AchievementsSection;
+

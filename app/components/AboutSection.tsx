@@ -1,10 +1,16 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, ReactNode } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { motion } from "framer-motion";
 
-const TAB_DATA = [
+interface TabDataItem {
+  title: string;
+  id: string;
+  content: ReactNode;
+}
+
+const TAB_DATA: TabDataItem[] = [
   {
     title: "Skills",
     id: "skills",
@@ -111,9 +117,9 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
-  const handleTabChange = (id) => {
+  const handleTabChange = (id: string) => {
     startTransition(() => {
       setTab(id);
     });
@@ -209,7 +215,7 @@ const AboutSection = () => {
               transition={{ duration: 0.5 }}
               className="min-h-[300px]"
             >
-              {TAB_DATA.find((t) => t.id === tab).content}
+              {TAB_DATA.find((t) => t.id === tab)?.content}
             </motion.div>
           </motion.div>
         </div>
@@ -219,3 +225,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

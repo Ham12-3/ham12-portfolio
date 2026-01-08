@@ -87,7 +87,7 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            {["AWS Lambda", "Next.js", "FastAPI", "OpenAI API", "Docker"].map((tech, index) => (
+            {["AWS Lambda", "Next.js", "FastAPI", "OpenAI API", "Docker"].map((tech) => (
               <span 
                 key={tech}
                 className="px-4 py-2 bg-luxury-darkGray/50 backdrop-blur-sm border border-luxury-gold/20 rounded-full text-luxury-platinum text-sm font-medium"
@@ -129,7 +129,3 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-
-// 
-
-// 
