@@ -22,7 +22,7 @@ html {
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #111827;
-  background: #F9FAFB;
+  background: #0A0A0A;
   min-height: 100vh;
 }
 
@@ -45,13 +45,11 @@ body {
 
 /* Glass card effect */
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .dark .glass-card {
-  background: rgba(23, 23, 23, 0.7);
+  background: rgba(23, 23, 23, 0.3);
 }
 
 /* Selection */
@@ -103,4 +101,13 @@ body {
 
 .animate-accordion-up {
   animation: accordion-up 0.2s ease-out;
+}
+
+/* Background Pattern SVG */
+.bg-pattern {
+  --line-colour: #EAB308;
+}
+
+.dark .bg-pattern {
+  --line-colour: #ffffff;
 }

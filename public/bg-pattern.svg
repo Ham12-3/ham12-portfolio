@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none" style="background-color: transparent;">
+  <defs>
+    <style>
+      /* Default is light lines for dark backgrounds */
+      .line {
+        stroke: var(--line-colour, #ffffff);
+        stroke-width: 1;
+        stroke-opacity: 0.18;
+        vector-effect: non-scaling-stroke;
+        stroke-linecap: round;
+        fill: none;
+      }
+      .line-strong {
+        stroke-opacity: 0.32;
+      }
+    </style>
+  </defs>
+
+  <!-- Vertical grid lines (only two) -->
+  <line class="line" x1="120" y1="0" x2="120" y2="900" />
+  <line class="line" x1="1320" y1="0" x2="1320" y2="900" />
+
+  <!-- Bottom-left quadrant -->
+  <!-- Centre at (0, 900) -->
+  <path class="line line-strong" d="M 280 900 A 280 280 0 0 0 0 620" />
+  <path class="line" d="M 200 900 A 200 200 0 0 0 0 700" />
+  <path class="line" d="M 120 900 A 120 120 0 0 0 0 780" />
+
+  <!-- Radial lines for bottom-left quadrant -->
+  <line class="line" x1="0" y1="900" x2="280" y2="900" />
+  <line class="line" x1="0" y1="900" x2="0" y2="620" />
+  <line class="line" x1="0" y1="900" x2="198" y2="702" />
+  <line class="line" x1="0" y1="900" x2="242" y2="758" />
+  <line class="line" x1="0" y1="900" x2="141" y2="659" />
+
+  <!-- Top-right quadrant -->
+  <!-- Centre at (1440, 0) -->
+  <path class="line line-strong" d="M 1160 0 A 280 280 0 0 1 1440 280" />
+  <path class="line" d="M 1240 0 A 200 200 0 0 1 1440 200" />
+  <path class="line" d="M 1320 0 A 120 120 0 0 1 1440 120" />
+
+  <!-- Radial lines for top-right quadrant -->
+  <line class="line" x1="1440" y1="0" x2="1160" y2="0" />
+  <line class="line" x1="1440" y1="0" x2="1440" y2="280" />
+  <line class="line" x1="1440" y1="0" x2="1242" y2="198" />
+  <line class="line" x1="1440" y1="0" x2="1198" y2="142" />
+  <line class="line" x1="1440" y1="0" x2="1299" y2="241" />
+</svg>

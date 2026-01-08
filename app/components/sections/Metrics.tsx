@@ -42,7 +42,7 @@ export default function Metrics() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="stats" className="py-24 bg-surface-light dark:bg-surface-dark relative overflow-hidden">
+    <section id="stats" className="py-24 bg-surface-light/10 dark:bg-surface-dark/10 relative overflow-hidden">
       <div className="absolute inset-0 hero-pattern pointer-events-none opacity-30"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div

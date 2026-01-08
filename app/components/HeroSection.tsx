@@ -90,7 +90,7 @@ const HeroSection = () => {
             {["AWS Lambda", "Next.js", "FastAPI", "OpenAI API", "Docker"].map((tech) => (
               <span 
                 key={tech}
-                className="px-4 py-2 bg-luxury-darkGray/50 backdrop-blur-sm border border-luxury-gold/20 rounded-full text-luxury-platinum text-sm font-medium"
+                className="px-4 py-2 bg-luxury-darkGray/50 border border-luxury-gold/20 rounded-full text-luxury-platinum text-sm font-medium"
               >
                 {tech}
               </span>

@@ -32,7 +32,7 @@ export default function Intro() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 bg-surface-light dark:bg-surface-dark relative">
+    <section id="about" className="py-24 bg-surface-light/10 dark:bg-surface-dark/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}

@@ -61,7 +61,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-24 bg-background-light dark:bg-background-dark">
+    <section id="services" className="py-24 bg-background-light/10 dark:bg-background-dark/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           <motion.div

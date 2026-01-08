@@ -11,10 +11,14 @@ import Education from "./components/sections/Education";
 import FAQ from "./components/sections/FAQ";
 import Metrics from "./components/sections/Metrics";
 import Footer from "./components/sections/Footer";
+import BackgroundPattern from "./components/BackgroundPattern";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-sans transition-colors duration-300 relative selection:bg-primary selection:text-black">
+    <main className="min-h-screen text-text-main-light dark:text-text-main-dark font-sans transition-colors duration-300 relative selection:bg-primary selection:text-black">
+      {/* Background Pattern SVG - Behind everything but visible */}
+      <BackgroundPattern />
+      
       {/* Background gradient blobs with subtle animation */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
         <motion.div
@@ -48,16 +52,19 @@ export default function Home() {
         />
       </div>
 
-      <Navbar />
-      <Hero />
-      <Intro />
-      <YearlySnapshot />
-      <Portfolio />
-      <Services />
-      <Education />
-      <FAQ />
-      <Metrics />
-      <Footer />
+      {/* Content wrapper with relative positioning */}
+      <div className="relative z-20">
+        <Navbar />
+        <Hero />
+        <Intro />
+        <YearlySnapshot />
+        <Portfolio />
+        <Services />
+        <Education />
+        <FAQ />
+        <Metrics />
+        <Footer />
+      </div>
     </main>
   );
 }

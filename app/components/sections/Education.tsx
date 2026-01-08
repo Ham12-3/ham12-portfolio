@@ -38,7 +38,7 @@ const education: EducationItem[] = [
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-surface-light dark:bg-surface-dark">
+    <section id="education" className="py-24 bg-surface-light/10 dark:bg-surface-dark/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

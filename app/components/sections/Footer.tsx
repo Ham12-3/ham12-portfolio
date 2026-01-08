@@ -64,7 +64,7 @@ export default function Footer() {
 
   return (
     <>
-      <section id="contact" className="py-24 bg-background-light dark:bg-background-dark">
+      <section id="contact" className="py-24 bg-background-light/10 dark:bg-background-dark/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -116,7 +116,7 @@ export default function Footer() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-surface-light dark:bg-surface-dark p-8 md:p-10 rounded-3xl border border-border-light dark:border-border-dark shadow-2xl relative"
+              className="bg-surface-light/20 dark:bg-surface-dark/20 p-8 md:p-10 rounded-3xl border border-border-light/30 dark:border-border-dark/30 shadow-2xl relative"
             >
               <motion.div
                 animate={{
@@ -262,7 +262,7 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="py-12 bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-20"
+        className="py-12 bg-surface-light/10 dark:bg-surface-dark/10 border-t border-border-light/30 dark:border-border-dark/30 mt-20"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">

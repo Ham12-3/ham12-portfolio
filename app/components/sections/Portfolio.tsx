@@ -205,7 +205,7 @@ export default function Portfolio() {
   });
 
   return (
-    <section id="portfolio" className="py-24 bg-surface-light dark:bg-surface-dark">
+    <section id="portfolio" className="py-24 bg-surface-light/10 dark:bg-surface-dark/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

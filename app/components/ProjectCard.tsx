@@ -43,7 +43,7 @@ const ProjectCard = ({
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-luxury-dark via-transparent to-transparent opacity-60"></div>
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-luxury-dark/90 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col gap-4">
+        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-luxury-dark/90 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col gap-4">
           <div className="flex gap-4">
             <motion.div
               whileHover={{ scale: 1.1 }}
