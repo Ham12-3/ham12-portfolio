@@ -33,6 +33,15 @@ export interface Work {
 
 export const works: Work[] = [
   {
+    title: "PulsePM",
+    category: "AI Project Management",
+    description:
+      "Project management where the AI does the admin — turns a whiteboard photo into a full plan, flags what's slipping, and writes the status report.",
+    image: "/images/projects/pulsepm.png",
+    url: "https://www.pulsepm.ai/",
+    domain: "pulsepm.ai",
+  },
+  {
     title: "Genie AI",
     category: "AI Platform",
     description:
@@ -70,6 +79,7 @@ export const services = [
 
 // Rendered as wordmarks in the marquee — companies, institutions and tools I've worked with
 export const brands = [
+  { name: "PulsePM", className: "font-bold tracking-tight" },
   { name: "genie ai", className: "font-semibold tracking-tight" },
   { name: "OPSIS", className: "font-bold tracking-[0.2em]" },
   { name: "lotusbpm", className: "font-semibold italic" },
