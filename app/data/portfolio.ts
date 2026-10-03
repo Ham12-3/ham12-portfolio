@@ -3,7 +3,7 @@ export const profile = {
   fullName: "Abdulhamid Sonaike",
   logo: { light: "abdul", bold: "hamid." },
   tagline: "A software engineer & AI specialist currently based in London",
-  resume: "/abulhamid_sonaike_verified-resume.pdf",
+  resume: "/Abdulhamid_Sonaike_CV.pdf",
   photo: "/images/profile.jpg",
 };
 
