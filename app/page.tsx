@@ -1,70 +1,49 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Navbar from "./components/sections/Navbar";
 import Hero from "./components/sections/Hero";
-import Intro from "./components/sections/Intro";
-import YearlySnapshot from "./components/sections/YearlySnapshot";
-import Portfolio from "./components/sections/Portfolio";
-import Services from "./components/sections/Services";
-import Education from "./components/sections/Education";
-import FAQ from "./components/sections/FAQ";
-import Metrics from "./components/sections/Metrics";
+import SelectedWorks from "./components/sections/SelectedWorks";
+import About from "./components/sections/About";
+import BrandMarquee from "./components/sections/BrandMarquee";
+import Impact from "./components/sections/Impact";
+import ListSection from "./components/sections/ListSection";
+import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
-import BackgroundPattern from "./components/BackgroundPattern";
+import { education, experience, faqs } from "./data/portfolio";
 
 export default function Home() {
-  return (
-    <main className="min-h-screen text-text-main-light dark:text-text-main-dark font-sans transition-colors duration-300 relative selection:bg-primary selection:text-black">
-      {/* Background Pattern SVG - Behind everything but visible */}
-      <BackgroundPattern />
-      
-      {/* Background gradient blobs with subtle animation */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
-        <motion.div
-          animate={{
-            x: [0, 50, 0],
-            y: [0, 30, 0],
-            scale: [1, 1.1, 1],
-            opacity: [0.6, 0.7, 0.6],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-[100px]"
-        />
-        <motion.div
-          animate={{
-            x: [0, -30, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.15, 1],
-            opacity: [0.4, 0.5, 0.4],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-          className="absolute bottom-[20%] right-[-5%] w-[30rem] h-[30rem] bg-blue-500/5 rounded-full blur-[100px] dark:bg-blue-500/10"
-        />
-      </div>
+  const experienceItems = experience.map((e) => ({
+    title: e.role,
+    meta: `${e.period} - ${e.company}`,
+    details: (
+      <>
+        <p>{e.summary}</p>
+        <ul className="mt-4 space-y-2">
+          {e.achievements.map((a) => (
+            <li key={a} className="flex gap-3">
+              <span className="mt-[11px] h-1 w-1 shrink-0 rounded-full bg-ink" />
+              {a}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-[14px] uppercase tracking-[0.04em] text-neutral-50">{e.location}</p>
+      </>
+    ),
+  }));
 
-      {/* Content wrapper with relative positioning */}
-      <div className="relative z-20">
-        <Navbar />
-        <Hero />
-        <Intro />
-        <YearlySnapshot />
-        <Portfolio />
-        <Services />
-        <Education />
-        <FAQ />
-        <Metrics />
-        <Footer />
-      </div>
+  const faqItems = faqs.map((f) => ({ title: f.question, meta: "", details: <p>{f.answer}</p> }));
+
+  return (
+    <main>
+      <Navbar />
+      <Hero />
+      <SelectedWorks />
+      <About />
+      <BrandMarquee />
+      <Impact />
+      <ListSection id="experience" heading={<>Experience &amp;<br />Journey</>} items={experienceItems} />
+      <ListSection id="education" heading={<>Education &amp;<br />Certifications</>} items={education} />
+      <ListSection id="faq" heading={<>Frequently<br />Asked</>} items={faqItems} />
+      <Contact />
+      <Footer />
     </main>
   );
 }

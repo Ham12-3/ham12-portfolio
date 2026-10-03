@@ -1,13 +1,18 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import Script from 'next/script';
 import { ReactNode } from 'react';
 
-const inter = Inter({ subsets: ["latin"] });
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter-tight",
+});
 
 export const metadata = {
-  title: "Abdulhamid Sonaike",
-  description: "Full stack developer",
+  title: "Abdulhamid Sonaike — Software Engineer & AI Specialist",
+  description:
+    "Software engineer building AI products that make a measurable difference. Based in London, working remotely worldwide.",
 };
 
 interface RootLayoutProps {
@@ -16,8 +21,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
+    <html lang="en" className={interTight.variable}>
+      <body className="font-sans">
         {children}
         {/* Customer Support AI Widget */}
         <Script

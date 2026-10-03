@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,40 +9,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#EAB308",
-        "primary-light": "#FEF08A",
-        "background-light": "#F9FAFB",
-        "background-dark": "#0A0A0A",
-        "surface-light": "#FFFFFF",
-        "surface-dark": "#171717",
-        "text-main-light": "#111827",
-        "text-main-dark": "#F9FAFB",
-        "text-muted-light": "#6B7280",
-        "text-muted-dark": "#9CA3AF",
-        "border-light": "#E5E7EB",
-        "border-dark": "#262626",
+        // Neutral scale lifted from the Showcasy design system
+        ink: "#030712",
+        neutral: {
+          0: "#FFFFFF",
+          10: "#F9FAFB",
+          15: "#F3F4F6",
+          20: "#E5E7EB",
+          30: "#D1D5DB",
+          40: "#B6BCC6",
+          50: "#6B7280",
+          70: "#374151",
+          90: "#111827",
+        },
+        card: "#EBEBEB",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        sans: ["var(--font-inter-tight)", "Inter Tight", "system-ui", "sans-serif"],
       },
-      boxShadow: {
-        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-        'glow': '0 0 15px rgba(234, 179, 8, 0.3)',
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+      maxWidth: {
+        site: "1440px",
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
         },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        marquee: "marquee 40s linear infinite",
+        "accordion-down": "accordion-down 0.3s ease-out",
+        "accordion-up": "accordion-up 0.3s ease-out",
       },
     },
   },
